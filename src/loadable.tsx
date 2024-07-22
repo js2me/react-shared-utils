@@ -11,7 +11,7 @@ const DefaultFallback: ComponentType = () => null;
 /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
 export function loadable<P = any>(
   loadFn: LoadableComponentFn<P>,
-  Fallback: Maybe<ComponentType>,
+  Fallback?: Maybe<ComponentType>,
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   ExtraComponent?: ComponentType<any>,
 ): ComponentType<P> {
