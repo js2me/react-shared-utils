@@ -9,7 +9,7 @@
     "build": "tsc",
     "prepub": "pnpm run build & copy package.json dist & copy README.md dist & copy LICENSE dist",
     "pub": "cd dist & npm publish",
-    "postpub": "cd dist & del package.json"
+    "postpub": "rimraf dist"
   },
   "keywords": [],
   "author": "js2me",
