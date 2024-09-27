@@ -1,9 +1,3 @@
-declare global {
-  const process: {
-    env: { NODE_ENV?: string };
-  };
-}
-
 /* eslint-disable @typescript-eslint/no-explicit-any */
 export type ValueOf<T> = T[keyof T];
 
