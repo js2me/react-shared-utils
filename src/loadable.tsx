@@ -1,6 +1,8 @@
 import { ComponentType, lazy, Suspense } from 'react';
 import { fetchLazyModule } from 'yammies/imports';
 
+import { Maybe } from './utils/types';
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type LoadableComponentFn<P = Record<string, any>> = () => Promise<
   ComponentType<P>
