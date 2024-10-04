@@ -1,9 +1,6 @@
 {
   "name": "react-shared-utils",
-  "version": "2.0.3",
-  "files": [
-    "*"
-  ],
+  "version": "2.0.4",
   "scripts": {
     "clean": "rimraf dist",
 
