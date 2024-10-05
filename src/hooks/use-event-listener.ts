@@ -13,7 +13,7 @@ export const useEventListener = <EventName extends keyof HTMLElementEventMap>({
   debounce: debounceTimeout,
 }: {
   event: EventName;
-  handler: (e: HTMLElementEventMap[EventName]) => void;
+  handler: (event: HTMLElementEventMap[EventName]) => void;
   options?: boolean | AddEventListenerOptions;
   deps?: unknown[];
   node?: HTMLElement | Document | Window;
@@ -22,8 +22,8 @@ export const useEventListener = <EventName extends keyof HTMLElementEventMap>({
   const handlerRef = useSyncRef(handler);
 
   useEffect(() => {
-    const handleEvent = (e: HTMLElementEventMap[EventName]) =>
-      handlerRef.current(e);
+    const handleEvent = (event: HTMLElementEventMap[EventName]) =>
+      handlerRef.current(event);
 
     const handler =
       debounceTimeout == null

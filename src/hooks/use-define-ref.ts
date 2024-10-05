@@ -7,11 +7,11 @@ import { MutableRefObject, useRef } from 'react';
  * https://reactjs.org/docs/hooks-reference.html#usememo
  * @param defineFn Function which returns defined value.
  */
-export const useDefineRef = <T>(defineFn: () => T): MutableRefObject<T> => {
+export const useDefineRef = <T>(getValue: () => T): MutableRefObject<T> => {
   const ref = useRef<T>(void 0 as T);
 
   if (!ref.current) {
-    ref.current = defineFn();
+    ref.current = getValue();
   }
 
   return ref;

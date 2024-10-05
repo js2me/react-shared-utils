@@ -18,7 +18,7 @@ export const useEvent = <H extends Function>(handler: H): H => {
   return useCallback((...args: unknown[]) => {
     // In a real implementation, this would throw if called during render
     // eslint-disable-next-line @typescript-eslint/ban-types
-    const fn = handlerRef.current as Function;
-    return fn(...args);
+    const function_ = handlerRef.current as Function;
+    return function_(...args);
   }, []) as unknown as H;
 };

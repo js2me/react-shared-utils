@@ -5,9 +5,9 @@ import { useDefineRef } from './use-define-ref';
  * useMemo doesn't give this guarantee unfortunately -
  * https://reactjs.org/docs/hooks-faq.html#how-to-create-expensive-objects-lazily
  * https://reactjs.org/docs/hooks-reference.html#usememo
- * @param defineValue Function which returns defined value.
+ * @param getValue Function which returns defined value.
  */
-export const useConstant = <T>(defineValue: () => T): T => {
-  const ref = useDefineRef(() => ({ value: defineValue() }));
+export const useConstant = <T>(getValue: () => T): T => {
+  const ref = useDefineRef(() => ({ value: getValue() }));
   return ref.current.value;
 };

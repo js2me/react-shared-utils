@@ -16,7 +16,7 @@ export const useFlag = (defaultValue = false): FlagHook => {
   const set = setEnabled;
   const disable = useCallback(() => setEnabled(false), []);
 
-  const flagObjRef = useRef<FlagHook>({
+  const flagObjectRef = useRef<FlagHook>({
     enabled,
     toggle,
     enable,
@@ -24,7 +24,7 @@ export const useFlag = (defaultValue = false): FlagHook => {
     disable,
   });
 
-  flagObjRef.current.enabled = enabled;
+  flagObjectRef.current.enabled = enabled;
 
-  return flagObjRef.current;
+  return flagObjectRef.current;
 };

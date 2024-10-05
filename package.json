@@ -1,9 +1,11 @@
 {
   "name": "react-shared-utils",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "scripts": {
     "clean": "rimraf dist",
-    "prebuild": "npm run clean && eslint . --fix",
+    "check": "eslint . --fix",
+
+    "prebuild": "npm run clean && npm run check",
     "build": "tsc",
     "postbuild": "node ./post-build.mjs",
     "prepub": "pnpm run build",
@@ -33,7 +35,7 @@
     "@types/react": "^18.3.3",
     "eslint": "8.57.0",
     "exports-post-build-script": "github:js2me/exports-post-build-script",
-    "js2me-eslint-config": "1.0.0",
+    "js2me-eslint-config": "1.0.4",
     "rimraf": "6.0.1",
     "typescript": "5.4.5"
   },
