@@ -1,3 +1,6 @@
+export * from './use-abort-controller';
+export * from './use-abort-signal';
+export * from './use-instance';
 export * from './use-click-outside';
 export * from './use-constant';
 export * from './use-define-ref';
@@ -8,6 +11,7 @@ export * from './use-flag';
 export * from './use-force-update';
 export * from './use-last-defined-value';
 export * from './use-resize-observer';
+export * from './use-intersection-observer';
 export * from './use-sync-ref';
 export * from './use-toggle';
 export * from './use-value';
