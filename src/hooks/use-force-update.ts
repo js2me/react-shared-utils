@@ -1,10 +1,18 @@
 import { useCallback, useState } from 'react';
 
-export const useForceUpdate = () => {
-  // eslint-disable-next-line sonarjs/hook-use-state
-  const [, setState] = useState<unknown>(null);
+interface ForceUpdateFn {
+  (): void;
+  dep: unknown;
+}
 
-  return useCallback(() => {
+export const useForceUpdate = () => {
+  const [dep, setState] = useState<unknown>(null);
+
+  const forceUpdateFn = useCallback(() => {
     setState({});
   }, []);
+
+  (forceUpdateFn as any).dep = dep;
+
+  return forceUpdateFn as unknown as ForceUpdateFn;
 };
