@@ -6,13 +6,13 @@ interface ForceUpdateFn {
 }
 
 export const useForceUpdate = () => {
-  const [dep, setState] = useState<unknown>(null);
+  const [state, setState] = useState<unknown>(null);
 
   const forceUpdateFn = useCallback(() => {
     setState({});
   }, []);
 
-  (forceUpdateFn as any).dep = dep;
+  (forceUpdateFn as any).dep = state;
 
   return forceUpdateFn as unknown as ForceUpdateFn;
 };
