@@ -1,6 +1,6 @@
 import { MutableRefObject } from 'react';
 
-import { useEventListener } from './use-event-listener';
+import { useEventListener } from './use-event-listener.js';
 
 type ClickOutsideInput = {
   contentRef: MutableRefObject<HTMLElement | null>;

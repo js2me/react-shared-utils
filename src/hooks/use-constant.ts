@@ -1,4 +1,4 @@
-import { useDefineRef } from './use-define-ref';
+import { useDefineRef } from './use-define-ref.js';
 
 /**
  * React hook for creating a value exactly once.

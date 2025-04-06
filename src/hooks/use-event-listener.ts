@@ -2,7 +2,7 @@
 import { debounce } from 'lodash-es';
 import { useEffect } from 'react';
 
-import { useSyncRef } from './use-sync-ref';
+import { useSyncRef } from './use-sync-ref.js';
 
 export const useEventListener = <EventName extends keyof HTMLElementEventMap>({
   event,

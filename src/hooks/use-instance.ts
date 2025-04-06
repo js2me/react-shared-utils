@@ -1,7 +1,7 @@
 import { useLayoutEffect } from 'react';
 
-import { useAbortSignal } from './use-abort-signal';
-import { useConstant } from './use-constant';
+import { useAbortSignal } from './use-abort-signal.js';
+import { useConstant } from './use-constant.js';
 
 interface InstanceCreateConfig<TPayload, TArgs extends any[] = any[]> {
   abortSignal: AbortSignal;

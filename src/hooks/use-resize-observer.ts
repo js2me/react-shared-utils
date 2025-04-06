@@ -1,7 +1,7 @@
 import { useLayoutEffect } from 'react';
 
-import { useDefineRef } from './use-define-ref';
-import { useSyncRef } from './use-sync-ref';
+import { useDefineRef } from './use-define-ref.js';
+import { useSyncRef } from './use-sync-ref.js';
 
 export const useResizeObserver = (callback: ResizeObserverCallback) => {
   const callbackRef = useSyncRef(callback);

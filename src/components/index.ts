@@ -1,1 +1,1 @@
-export * from './noop-component';
+export * from './noop-component.js';

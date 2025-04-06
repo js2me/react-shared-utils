@@ -1,6 +1,5 @@
 import { Ref } from 'react';
-
-import { AnyObject } from './utils/types';
+import { AnyObject } from 'yummies/utils/types';
 
 export const attachRef = <Element>(
   ref: Ref<Element> | undefined | null,

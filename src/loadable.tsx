@@ -1,1 +1,1 @@
-export * from 'react-simple-loadable/loadable';
+export * from 'react-simple-loadable';
